@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sovereign_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=${API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_API_URL=${OPENAI_API_URL:-https://api.openai.com/v1/chat/completions}
+      - MODEL_NAME=${MODEL_NAME:-gpt-4o-mini}
+      - FRONTEND_ORIGIN=${FRONTEND_ORIGIN:-http://localhost:5500}
+    volumes:
+      - ./:/home/appuser
+    restart: unless-stopped
+    user: "1000:1000"
+
+  frontend:
+    image: nginx:alpine
+    container_name: sovereign_frontend
+    ports:
+      - "5500:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./favicon.ico:/usr/share/nginx/html/favicon.ico:ro
+    restart: unless-stopped
