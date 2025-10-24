@@ -1,6 +1,6 @@
 # 🔐 Security Policy — Sovereign AI Q&A Microservice
 
-This document outlines the security controls implemented in this project as part of the **SOAISEC AI Security Internship** requirements.
+This document outlines the security controls implemented in this project as part of the **SOAISEC Internship** requirements.
 
 The system is designed using a **defense-in-depth security model**, ensuring layered protection against common attack vectors such as unauthorized access, abuse, prompt injection, and credential leakage.
 
@@ -126,5 +126,5 @@ Do **not** post vulnerabilities publicly until properly addressed.
 ---
 
 **Maintainer:**  
-Chiku — SOAISEC Security Internship Project  
+Shreyas — SOAISEC Security Internship Project  
 2025
