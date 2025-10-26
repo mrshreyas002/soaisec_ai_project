@@ -40,7 +40,8 @@ Blocked inputs trigger **400 response** with reason.
 | Data minimization | Only necessary fields returned to client |
 
 If a response violates filter rules:
-
+```json
+{"answer": "***blocked***", "blocked": true}
 
 
 ---
@@ -124,6 +125,14 @@ If a security issue is discovered, contact the maintainers privately.
 Do **not** post vulnerabilities publicly until properly addressed.
 
 ---
+
+Reviewer Navigation:
+
+- `/api/health` → uptime status
+- `/api/metrics` → security analytics
+- `frontend/index.html` → interactive UI demo
+
+Thank you for reviewing the project.
 
 **Maintainer:**  
 Shreyas — SOAISEC Security Internship Project  
