@@ -39,9 +39,9 @@ Blocked inputs trigger **400 response** with reason.
 | LLM hallucination leakage (secrets) | Sensitive key regex scanning masks response |
 | Data minimization | Only necessary fields returned to client |
 
-If a response violates filter rules:
-```json
-{"answer": "***blocked***", "blocked": true}
+If a response violates filter rules: 
+`json
+{"answer": "***blocked***", "blocked": true} `
 
 
 ---
